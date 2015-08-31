@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+<!--
+
+body {
+	
+}
+a{
+	cursor:pointer;
+}
+#_TOPDIV {
+	min-width: 700px;
+	width: 100%;
+}
+
+.navbar-default {
+	background-color: #1385BF !important;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover
+{
+	color: white;
+	background-color: #0B73A6;
+}
+
+#_D1 .nav>li>a {
+	color: white !important;
+	height: 71px !important;
+	font-size: 14px !important;
+	padding: 36px 25px 21px 25px !important;
+	font-weight: bold !important;
+}
+
+#_D1 .navbar-text {
+	color: white !important;
+	font-size: 12px !important;
+	margin-top: 40px !important;
+}
+
+#_D1 .navbar-right {
+	float: right !important;
+	margin-right: 15%;
+}
+
+#_D1 .navbar-text a {
+	color: white !important;
+	font-size: 12px !important;
+}
+
+#_D2 .breadcrumb>li+li:before {
+	padding: 0px 5px;
+	color: gray;
+	content: "";
+}
+
+#_D2 .breadcrumb {
+	height: 42px;
+	list-style: outside none none;
+	padding-left: 15px;
+	background-color: #EFEBEA;
+	margin-bottom: 0px;
+	list-style: none;
+	border-radius: 0px;
+}
+
+#_D2 .breadcrumb>li {
+	display: inline-block;
+	padding-top: 7px;
+	font-size: 12px !important;
+	color: gray;
+}
+
+
+/*BEGIN SIDEBAR*/
+#_D3{
+	width: 115px !important;
+	background-color: #EFEBEA;
+	height: 100%;
+	float: left;
+	border:0px;
+	border-right-color: #E7E7E7;
+	border-right-width: 1px;
+	border-style:solid;
+}
+#_D3.btn-group-vertical > button{
+	width:100%;
+	height:47px;
+	border-radius:0px;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+#_D3.btn-group-vertical>.btn:first-child:not(:last-child) {
+	border-radius: 0px;
+}
+#_D3.btn-group-vertical>.btn:last-child:not(:first-child) {
+	border-radius: 0px;
+}
+#_D3 .btn-default {
+	color: #333;
+	background-color: #EFEBEA;
+	border-color:#E7E7E7;
+	border-right-width:0px;
+	text-align: left;
+}
+#_D3 .btn-default:hover,#_D3 .btn-default:focus,#_D3 .btn-default:active{
+	background-color: white;
+	border-radius: 0px;
+}
+#_D3 .btn.active,#_D3 .btn:active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125);
+	box-shadow: inset 0 0px 0px rgba(0, 0, 0, .125)
+}
+/*END SIDEBAR*/
+-->
+
+#_D4 {
+	width: 170px;
+	background-color: #F7F6F4;
+	height: 100%;
+	float: left;
+}
+
+#_D5 {
+	background-color:violet;
+	width:auto;
+	height:100%;
+	float:none;	
+}
+
+#_S {
+	background-color:orchid;
+	width:auto;
+	height:100%;
+}
