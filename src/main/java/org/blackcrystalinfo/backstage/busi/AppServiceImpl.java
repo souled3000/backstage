@@ -24,8 +24,7 @@ public class AppServiceImpl implements IAppService {
 
 	@Transactional(readOnly = true)
 	public Map<?, ?> check(String id, String cur) {
-		Map<?, ?> app = jdbcTemplate.queryForMap(
-				"select * from app where id=?", id);
+		Map<?, ?> app = jdbcTemplate.queryForMap("select * from app where id=?", id);
 		Map<Object, Object> m = new HashMap<Object, Object>();
 		int last = MiscUtils.copyright((String) app.get("last"));
 		int avail = MiscUtils.copyright((String) app.get("avail"));
@@ -69,8 +68,7 @@ public class AppServiceImpl implements IAppService {
 	}
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"spring/beans.xml");
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/beans.xml");
 
 		ctx.start();
 
@@ -101,7 +99,7 @@ public class AppServiceImpl implements IAppService {
 			String inserSql = "insert into app(id, last, avail, url) values(?,?,?,?)";
 			jdbcTemplate.update(inserSql, id, cur, min, url);
 		}
-		
+
 		System.out.println("------------------------------------------------------\n\n");
 	}
 }

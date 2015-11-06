@@ -36,15 +36,13 @@ public class AppController {
 	IAppService appService;
 
 	@RequestMapping(value = "/check")
-	public ResponseEntity<String> check(String id, String cur) throws Exception {
-		Map<?, ?> m = appService.check(id, cur);
+	public ResponseEntity<String> check(String aId, String cur) throws Exception {
+		Map<?, ?> m = appService.check(aId, cur);
 		HttpHeaders headers = new HttpHeaders();
-		MediaType mt = new MediaType("application", "json",
-				Charset.forName("UTF-8"));
+		MediaType mt = new MediaType("application", "json", Charset.forName("UTF-8"));
 		headers.setContentType(mt);
 		headers.add("charset", "UTF-8");
-		return new ResponseEntity<String>(JSON.toJSONString(m), headers,
-				HttpStatus.OK);
+		return new ResponseEntity<String>(JSON.toJSONString(m), headers, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/app")
@@ -71,9 +69,7 @@ public class AppController {
 	}
 
 	@RequestMapping(value = "/appupload")
-	public String appupload(HttpServletRequest request,
-			@RequestParam(value = "file", required = false) MultipartFile file,
-			ModelMap model) {
+	public String appupload(HttpServletRequest request, @RequestParam(value = "file", required = false) MultipartFile file, ModelMap model) {
 		String appType = request.getParameter("appType");
 		String curVer = request.getParameter("curVer");
 		String minVer = request.getParameter("minVer");
@@ -81,22 +77,16 @@ public class AppController {
 		String appSaveFolder = "apps";
 
 		// 保存文件名称
-		String saveName = appType + "_" + System.currentTimeMillis() + "_"
-				+ file.getOriginalFilename();
+		String saveName = appType + "_" + System.currentTimeMillis() + "_" + file.getOriginalFilename();
 
 		// 拼接下载文件路径：http://ip:port/webapp/apps/apptype_appver_timestamp_filename
-		String downloadUrl = request.getScheme() + "://"
-				+ request.getServerName() + ":" + request.getServerPort()
-				+ request.getContextPath() + "/" + appSaveFolder + "/"
-				+ saveName;
+		String downloadUrl = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/" + appSaveFolder + "/" + saveName;
 
 		// 拼接存储绝对路径：absolute_path/apps/apptype_appver_timestamp_filename
-		String appSavePath = request.getServletContext().getRealPath("/") + "/"
-				+ appSaveFolder + "/" + saveName;
+		String appSavePath = request.getServletContext().getRealPath("/") + "/" + appSaveFolder + "/" + saveName;
 
 		try {
-			FileUtils.writeByteArrayToFile(new File(appSavePath),
-					file.getBytes(), false);
+			FileUtils.writeByteArrayToFile(new File(appSavePath), file.getBytes(), false);
 			System.out.println("upload success~~~>>> " + appSavePath);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -107,7 +97,7 @@ public class AppController {
 		return "redirect:app";
 	}
 
-	@RequestMapping(value = "/apps/{appname:.*}", method = RequestMethod.GET, produces = {"application/octet-stream","application/*",})
+	@RequestMapping(value = "/apps/{appname:.*}", method = RequestMethod.GET, produces = { "application/octet-stream", "application/*", })
 	public ResponseEntity<byte[]> download(@PathVariable String appname) throws IOException {
 		HttpHeaders headers = new HttpHeaders();
 		MediaType mt = new MediaType("application", "octet-stream");
@@ -115,16 +105,12 @@ public class AppController {
 
 		String appSaveFolder = "apps";
 
-		String appSavePath = ContextLoader.getCurrentWebApplicationContext()
-				.getServletContext().getRealPath("/")
-				+ "/" + appSaveFolder + "/" + appname;
+		String appSavePath = ContextLoader.getCurrentWebApplicationContext().getServletContext().getRealPath("/") + "/" + appSaveFolder + "/" + appname;
 		File dir = new File(appSavePath);
 		if (!dir.exists()) {
-			return new ResponseEntity<byte[]>(null, headers,
-					HttpStatus.NOT_FOUND);
+			return new ResponseEntity<byte[]>(null, headers, HttpStatus.NOT_FOUND);
 		}
 
-		return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(dir),
-				headers, HttpStatus.OK);
+		return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(dir), headers, HttpStatus.OK);
 	}
 }

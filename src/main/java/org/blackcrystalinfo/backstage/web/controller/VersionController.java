@@ -74,12 +74,8 @@ public class VersionController {
 		byte[] md5 = digest.digest(ctn);
 		chip.setMd5(MiscUtils.toHex(md5));
 		//取设备类型
-		byte[] bytDeviceType = new byte[2];
-		bytDeviceType[0]=ctn[26];
-		bytDeviceType[1]=ctn[27];
-		int deviceType = bytDeviceType[1];
-		deviceType = deviceType<<8;
-		deviceType = deviceType+(int)bytDeviceType[0];
+		int deviceType = (int)ctn[29]<<24|(int)ctn[28]<<16|(int)ctn[27]<<8|(int)ctn[26];
+		
 		// 设置URL
 		chip.setChipType(chip.getChipType()+"_"+deviceType);
 		chip.setDeviceType(deviceType+"");
