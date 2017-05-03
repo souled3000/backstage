@@ -52,3 +52,34 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2015-11-06 17:17:11
+
+
+
+DROP TABLE IF EXISTS `xaviera`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `xaviera` (
+  `mac` varchar(255) NOT NULL,
+  `chip` varchar(255) DEFAULT NULL,
+  `currentItem` varchar(255) DEFAULT NULL,
+  `isSuccess` varchar(255) DEFAULT NULL,
+  `ts` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+
+
+DROP TABLE IF EXISTS `joestar`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `joestar` (
+  `id` varchar(255) NOT NULL,
+  `mac` varchar(255) DEFAULT NULL,
+  `dv` varchar(255) DEFAULT NULL,
+  `bt` varchar(255) DEFAULT NULL,
+  `ts` varchar(255) DEFAULT NULL,
+  `dt` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+

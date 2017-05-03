@@ -67,6 +67,13 @@ public class AppServiceImpl implements IAppService {
 		}
 	}
 
+	@Transactional
+	public List<Map<String, Object>> canaveral(String start, String end, String dv) {
+		String sql = "select * from his_dev where dt>=? and dt<=? and dv=?";
+		List<Map<String, Object>> rt = jdbcTemplate.queryForList(sql, start, end, dv);
+		return rt;
+	}
+
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/beans.xml");
 

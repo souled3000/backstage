@@ -1,0 +1,134 @@
+[INFO ] 2016-10-25 17:56:19,848 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:285)
+Root WebApplicationContext: initialization started
+[INFO ] 2016-10-25 17:56:20,022 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing Root WebApplicationContext: startup date [Tue Oct 25 17:56:20 CST 2016]; root of context hierarchy
+[INFO ] 2016-10-25 17:56:20,107 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [D:\yedda\backstage\target\classes\spring\beans.xml]
+[INFO ] 2016-10-25 17:56:20,391 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [D:\yedda\backstage\target\classes\spring\mvc-servlet.xml]
+[INFO ] 2016-10-25 17:56:20,943 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [sys.properties]
+[INFO ] 2016-10-25 17:56:20,952 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2016-10-25 17:56:21,428 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/check],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.blackcrystalinfo.backstage.web.controller.AppController.check(java.lang.String,java.lang.String) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,429 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/apps/{appname:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/octet-stream || application/*],custom=[]}" onto public org.springframework.http.ResponseEntity<byte[]> org.blackcrystalinfo.backstage.web.controller.AppController.download(java.lang.String) throws java.io.IOException
+[INFO ] 2016-10-25 17:56:21,430 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/app],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.AppController.applist(org.springframework.ui.Model)
+[INFO ] 2016-10-25 17:56:21,430 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/appupload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.AppController.appupload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,org.springframework.ui.ModelMap)
+[INFO ] 2016-10-25 17:56:21,431 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.blackcrystalinfo.backstage.web.controller.ErrorController.handle(javax.servlet.http.HttpServletRequest)
+[INFO ] 2016-10-25 17:56:21,431 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/frame],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void org.blackcrystalinfo.backstage.web.controller.FrameController.login()
+[INFO ] 2016-10-25 17:56:21,435 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.init(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,435 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/save],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.save(org.blackcrystalinfo.backstage.bo.CfgLd2,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,436 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.enterAdd(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,436 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/dtl/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.dtl(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,437 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/edit/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.enterEdit(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,437 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/del/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.del(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,438 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.LoginController.check(org.blackcrystalinfo.backstage.bo.User,org.springframework.validation.BindingResult)
+[INFO ] 2016-10-25 17:56:21,439 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void org.blackcrystalinfo.backstage.web.controller.LoginController.login(org.springframework.ui.Model)
+[INFO ] 2016-10-25 17:56:21,440 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.VersionController.init(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,441 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/chips/{device}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/octet-stream],custom=[]}" onto public org.springframework.http.ResponseEntity<byte[]> org.blackcrystalinfo.backstage.web.controller.VersionController.download(java.lang.String) throws java.io.IOException
+[INFO ] 2016-10-25 17:56:21,441 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/upload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.VersionController.upload(javax.servlet.http.HttpServletRequest,org.blackcrystalinfo.backstage.bo.ChipVersion,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:21,443 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/xav/query],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.XavieraController.q(java.lang.String,java.lang.String,java.lang.String)
+[INFO ] 2016-10-25 17:56:21,444 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/xav/imp],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.blackcrystalinfo.backstage.web.controller.XavieraController.imp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+[INFO ] 2016-10-25 17:56:21,869 method:org.hibernate.validator.internal.util.Version.<clinit>(Version.java:27)
+HV000001: Hibernate Validator 5.1.2.Final
+[INFO ] 2016-10-25 17:56:22,384 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:517)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 25 17:56:20 CST 2016]; root of context hierarchy
+[INFO ] 2016-10-25 17:56:22,452 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:517)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Tue Oct 25 17:56:20 CST 2016]; root of context hierarchy
+[INFO ] 2016-10-25 17:56:22,579 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO ] 2016-10-25 17:56:22,614 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/javascript/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO ] 2016-10-25 17:56:22,617 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/styles/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[INFO ] 2016-10-25 17:56:22,623 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[INFO ] 2016-10-25 17:56:22,787 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:325)
+Root WebApplicationContext: initialization completed in 2929 ms
+[INFO ] 2016-10-25 17:56:22,840 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:484)
+FrameworkServlet 'mvc': initialization started
+[INFO ] 2016-10-25 17:56:22,844 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing WebApplicationContext for namespace 'mvc-servlet': startup date [Tue Oct 25 17:56:22 CST 2016]; parent: Root WebApplicationContext
+[INFO ] 2016-10-25 17:56:22,854 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [D:\yedda\backstage\target\classes\spring\beans.xml]
+[INFO ] 2016-10-25 17:56:22,923 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [D:\yedda\backstage\target\classes\spring\mvc-servlet.xml]
+[INFO ] 2016-10-25 17:56:22,992 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from class path resource [sys.properties]
+[INFO ] 2016-10-25 17:56:23,003 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO ] 2016-10-25 17:56:23,072 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/check],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.blackcrystalinfo.backstage.web.controller.AppController.check(java.lang.String,java.lang.String) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,072 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/apps/{appname:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/octet-stream || application/*],custom=[]}" onto public org.springframework.http.ResponseEntity<byte[]> org.blackcrystalinfo.backstage.web.controller.AppController.download(java.lang.String) throws java.io.IOException
+[INFO ] 2016-10-25 17:56:23,075 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/app],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.AppController.applist(org.springframework.ui.Model)
+[INFO ] 2016-10-25 17:56:23,076 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/appupload],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.AppController.appupload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile,org.springframework.ui.ModelMap)
+[INFO ] 2016-10-25 17:56:23,076 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[application/json],custom=[]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.blackcrystalinfo.backstage.web.controller.ErrorController.handle(javax.servlet.http.HttpServletRequest)
+[INFO ] 2016-10-25 17:56:23,077 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/frame],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void org.blackcrystalinfo.backstage.web.controller.FrameController.login()
+[INFO ] 2016-10-25 17:56:23,078 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.init(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,079 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/save],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.save(org.blackcrystalinfo.backstage.bo.CfgLd2,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,079 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/add],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.enterAdd(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,079 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/dtl/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.dtl(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,080 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/edit/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.enterEdit(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,080 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/ld2/del/{devType}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.Ld2Controller.del(java.lang.String,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,081 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.LoginController.check(org.blackcrystalinfo.backstage.bo.User,org.springframework.validation.BindingResult)
+[INFO ] 2016-10-25 17:56:23,083 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/login],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void org.blackcrystalinfo.backstage.web.controller.LoginController.login(org.springframework.ui.Model)
+[INFO ] 2016-10-25 17:56:23,084 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/upload],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.VersionController.init(org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,084 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/chips/{device}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/octet-stream],custom=[]}" onto public org.springframework.http.ResponseEntity<byte[]> org.blackcrystalinfo.backstage.web.controller.VersionController.download(java.lang.String) throws java.io.IOException
+[INFO ] 2016-10-25 17:56:23,084 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/upload],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.VersionController.upload(javax.servlet.http.HttpServletRequest,org.blackcrystalinfo.backstage.bo.ChipVersion,org.springframework.validation.BindingResult,org.springframework.ui.Model) throws java.lang.Exception
+[INFO ] 2016-10-25 17:56:23,085 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/xav/query],methods=[GET],params=[],headers=[],consumes=[],produces=[application/json;charset=UTF-8],custom=[]}" onto public java.lang.String org.blackcrystalinfo.backstage.web.controller.XavieraController.q(java.lang.String,java.lang.String,java.lang.String)
+[INFO ] 2016-10-25 17:56:23,086 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:217)
+Mapped "{[/xav/imp],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.blackcrystalinfo.backstage.web.controller.XavieraController.imp(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+[INFO ] 2016-10-25 17:56:23,129 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:517)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc-servlet': startup date [Tue Oct 25 17:56:22 CST 2016]; parent: Root WebApplicationContext
+[INFO ] 2016-10-25 17:56:23,161 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:517)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'mvc-servlet': startup date [Tue Oct 25 17:56:22 CST 2016]; parent: Root WebApplicationContext
+[INFO ] 2016-10-25 17:56:23,202 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+[INFO ] 2016-10-25 17:56:23,209 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/javascript/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[INFO ] 2016-10-25 17:56:23,215 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/styles/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+[INFO ] 2016-10-25 17:56:23,223 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:314)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+[INFO ] 2016-10-25 17:56:23,298 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:503)
+FrameworkServlet 'mvc': initialization completed in 457 ms
+[INFO ] 2016-10-25 17:58:45,286 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing WebApplicationContext for namespace 'mvc-servlet': startup date [Tue Oct 25 17:56:22 CST 2016]; parent: Root WebApplicationContext
+[INFO ] 2016-10-25 17:58:45,302 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing Root WebApplicationContext: startup date [Tue Oct 25 17:56:20 CST 2016]; root of context hierarchy

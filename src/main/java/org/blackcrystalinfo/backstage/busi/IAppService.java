@@ -10,5 +10,7 @@ public interface IAppService {
 
 	public void save(String id, String cur, String min, String msg, String url);
 
+	public List<Map<String,Object>> canaveral(String start, String end,String dv);
+
 	public void test();
 }
