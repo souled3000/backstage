@@ -16,5 +16,7 @@
 	<br>
 	<a href="<%=request.getContextPath()%>/canaveral">canaveral</a>
 	<br>
+	<a href="<%=request.getContextPath()%>/qr">二维码工具</a>
+	<br>
 </body>
 </html>

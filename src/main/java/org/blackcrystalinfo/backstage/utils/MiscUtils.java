@@ -11,6 +11,17 @@ import com.alibaba.fastjson.serializer.SerializeWriter;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
 public class MiscUtils {
+	public static int base32Encode(byte[] out, int outSize, int val, int inSize) {
+		final byte b32[] = "0123456789ABCDEFGHIJKLMNOPQRSTU/".getBytes();
+		int outByte = inSize * 8 / 5, i, n = 0;
+		if (outSize < outByte) {
+			return 0;
+		}
+		for (i = (outByte - 1); i >= 0; i--) {
+			out[n++] = b32[(val >> (i * 5)) & 0x1F];
+		}
+		return outByte;
+	}
 	public static byte[] fromHex(String hex) {
 		byte[] bytes = new byte[hex.length() / 2];
 		for (int i = 0; i < bytes.length; i++) {
