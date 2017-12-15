@@ -34,8 +34,15 @@
 
 	}
 	function genImg() {
-		var imgObj = document.getElementByID("qrImg");
-		imgObj.src = "";
+		var imgObj = document.getElementById("qrImg");
+		deviceType = document.getElementByName("deviceType").value;
+		codeType = document.getElementByName("codeType").value;
+		typeId = document.getElementByName("typeId").value;
+		ptDate = document.getElementByName("ptDate").value;
+		start = document.getElementByName("start").value;
+		end = document.getElementByName("end").value;
+		soleCode = document.getElementByName("soleCode").value;
+		imgObj.src = "<%=request.getContextPath()%>/qr/genImg?deviceType="+deviceType+"&codeType="+codeType+"&typeId="+typeId+"&ptDate="+ptDate+"&start="+start+"&end="+end+"&soleCode="+soleCode;
 	}
 </script>
 </head>
